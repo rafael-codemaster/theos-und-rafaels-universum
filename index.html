@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#03040b" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Unser Universum" />
+    <meta name="description" content="Jeder Stern trägt ein Stück von uns." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Theos und Rafaels Universum</title>
+  </head>
+  <body>
+    <main class="universe" aria-label="Theos und Rafaels Universum">
+      <canvas class="sky" aria-hidden="true"></canvas>
+
+      <header class="title">
+        <h1>Theos und Rafaels Universum</h1>
+        <p class="subtitle">Jeder Stern trägt ein Stück von uns.</p>
+        <p class="hint" aria-hidden="true">Berühre einen Stern</p>
+      </header>
+
+      <div class="labels" role="group" aria-label="Unsere Erinnerungen"></div>
+
+      <p class="closing">Unser Universum wächst noch immer, und ich hoffe, es hört nie damit auf.</p>
+
+      <button class="home" type="button" aria-label="Alle unsere Sterne zeigen">
+        <span aria-hidden="true">✦</span> alle unsere Sterne
+      </button>
+    </main>
+
+    <section class="memory" role="dialog" aria-modal="true" aria-labelledby="memory-title" aria-hidden="true" tabindex="-1" inert>
+      <button class="memory-close" type="button" aria-label="Zurück zu unserem Universum">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+      <div class="memory-scroll">
+        <article class="memory-card">
+          <p class="memory-date reveal" style="--d: 0ms"></p>
+          <h2 id="memory-title" class="memory-title reveal" style="--d: 120ms"></h2>
+          <div class="memory-rule reveal" style="--d: 260ms" aria-hidden="true"></div>
+          <figure class="memory-photo reveal" style="--d: 400ms">
+            <img alt="" decoding="async" />
+          </figure>
+          <div class="memory-text reveal" style="--d: 520ms"></div>
+          <button class="memory-return reveal" type="button" style="--d: 700ms">
+            Zurück zu unserem Universum
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <div class="safe-probe" aria-hidden="true"></div>
+
+    <noscript>
+      <p style="color:#f3ead8;font-family:Georgia,serif;text-align:center;padding:4rem 1rem">
+        Unser Universum braucht JavaScript, um zu leuchten.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
